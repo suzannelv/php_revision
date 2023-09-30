@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Form</title>
+    </head>
+    <body>
+        <form action="get_data.php" method="get">
+            <p>Prénom: <input type="text" name="username" /></p>
+            <p>
+                Sexe: <input type="radio" name="sex" value="H" checked />H
+                <input type="radio" name="sex" value="F" />F
+            </p>
+            <p>
+                <!-- name="hobby[]"后面加上中括号，表示这是一个数组，如果多选的话，所有被选的值都会显示，避免覆盖 -->
+                <input type="checkbox" name="hobby[]" value="vue" />Vue
+                <input type="checkbox" name="hobby[]" value="php" />php
+                <input type="checkbox" name="hobby[]" value="js" />JS
+            </p>
+            <p>
+                Ville:
+                <select name="area">
+                    <option value="lyon">Lyon</option>
+                    <option value="paris">Paris</option>
+                    <option value="nice">Nice</option>
+                </select>
+            </p>
+            <p><input type="submit" value="Envoyer" /></p>
+        </form>
+    </body>
+</html>
